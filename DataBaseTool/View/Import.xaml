@@ -1,0 +1,42 @@
+﻿<Window x:Class="DataBaseTool.Import"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DataBaseTool"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600" WindowStyle="SingleBorderWindow" ResizeMode="CanMinimize" >
+
+    <Grid>
+        <StackPanel>
+            <Label Content="这个向导允许你指定如何导入数据" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="20" Foreground="Blue" Height="40" VerticalAlignment="Top"></Label>
+            <Grid VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="数据源格式..." FontSize="16" HorizontalContentAlignment="Right"/>
+                <ComboBox Grid.Row="0" Grid.Column="1" Name="DataFormat" VerticalAlignment="Bottom" SelectionChanged="DataFormat_SelectionChanged" 
+                          SelectedValuePath="Key" DisplayMemberPath="Value" Margin="5,0,0,0" Width="430" HorizontalAlignment="Left"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Content="数据源..." FontSize="16" HorizontalContentAlignment="Right"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom"  Margin="5,0,0,0" HorizontalAlignment="Left">
+                    
+                <TextBox  x:Name="DataPath" Width="430" Height="25"/>
+                    <Button Width="20" Content="..." Name="FolderPreview" Click="FolderPreview_Click" Background="Transparent" VerticalContentAlignment="Bottom"/>
+                </TextBlock>
+
+                <Label Grid.Row="2" Grid.Column="0" Content="导入表..." FontSize="16" HorizontalContentAlignment="Right"/>
+                
+                <ComboBox Grid.Row="2" Grid.Column="1" Name="TableName" VerticalAlignment="Bottom" SelectedValuePath="Key" DisplayMemberPath="Value" 
+                          Margin="5,0,0,0" Width="430" HorizontalAlignment="Left"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

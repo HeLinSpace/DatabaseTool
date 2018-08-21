@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="DataBaseTool.Select"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="820" d:DesignWidth="1030">
+
+    <Grid>
+        <DockPanel>
+            <!-- 查询-->
+            <Grid DockPanel.Dock="Top" Height="150" >
+                <Button Name="Execute" Height="30" Width="40" HorizontalAlignment="Left" 
+                            VerticalAlignment="Top" Click="Execute_Click" Foreground ="LightSeaGreen" Background="White">执行</Button>
+                <!--<TextBlock Margin="0,30,5,0" Name="ContextBlock" TextWrapping="Wrap" FontSize="14"></TextBlock>-->
+                <TextBox Margin="0,30,5,0" Name="Context" AcceptsReturn="True" TextWrapping="Wrap" Background="White" Foreground="Blue"
+                             VerticalScrollBarVisibility ="Visible" FontSize="14"/>
+            </Grid>
+
+            <!-- 视图-->
+            <Grid DockPanel.Dock="Top">
+                <DataGrid Margin="0,0,5,5" Name="TableData" CanUserAddRows="False" BorderBrush="{x:Null}" Background="White"></DataGrid>
+                <TextBox Margin="0,0,5,5" Name="ErrorText" Visibility="Hidden" TextWrapping="Wrap"
+                             VerticalScrollBarVisibility ="Visible" Foreground="Red"></TextBox>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</UserControl>
