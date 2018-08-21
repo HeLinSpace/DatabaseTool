@@ -107,7 +107,6 @@
     <Compile Include="Extensions\IDictionaryExtend.cs" />
     <Compile Include="Common\ResourceDictionaries.cs" />
     <Compile Include="Controls\TreeViewEx\TreeViewEx.cs" />
-    <Compile Include="Converts\HiddenConverter.cs" />
     <Compile Include="View\DataGridPage.xaml.cs">
       <DependentUpon>DataGridPage.xaml</DependentUpon>
     </Compile>
@@ -247,8 +246,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Resource Include="Resources\icon\chose.ico" />
-    <Content Include="Resources\Resource.txt">
+    <Resource Include="Resource\icon\chose.ico" />
+    <Content Include="Resource\Resource.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -256,7 +255,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\Backs\" />
+    <Folder Include="Resource\Backs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
